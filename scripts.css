@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+:root {
+  --bg: #fff;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --accent: #000;
+  --accent-hover: #222;
+  --radius: 0.75rem;
+  --shadow: rgba(0,0,0,0.07);
+  --container-max: 1200px;
+  --transition: 0.3s ease;
+  --font-family: 'Poppins', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--bg);
+  color: var(--text-secondary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+a:hover, a:focus {
+  color: var(--accent-hover);
+  outline: none;
+}
+.container {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #e5e7eb;
+}
+nav.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+.logo a {
+  color: inherit;
+  text-decoration: none;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition);
+}
+.nav-links li a:hover,
+.nav-links li a:focus,
+.nav-links li a[aria-current="page"] {
+  border-color: var(--accent);
+  outline-offset: 2px;
+  outline: none;
+}
+
+main.container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.hero {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+.hero h1 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.grades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 2rem;
+  width: 100%;
+  justify-items: center;
+}
+.grade-card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px var(--shadow);
+  padding: 3rem 1rem;
+  cursor: pointer;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  border: 2px solid transparent;
+  text-align: center;
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
+  user-select: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+.grade-card:hover,
+.grade-card:focus {
+  border-color: var(--accent-hover);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+  outline: none;
+  color: var(--accent-hover);
+}
+
+.content-section {
+  margin-bottom: 4rem;
+}
+.content-section h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 2rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+.card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px var(--shadow);
+  padding: 1.5rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  outline-offset: 2px;
+  outline: none;
+}
+.card h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+.card p {
+  margin: 0;
+  flex-grow: 1;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+.btn {
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: var(--accent);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color var(--transition),
+    transform var(--transition);
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  margin-right: 0.7rem;
+  outline-offset: 3px;
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  outline: none;
+}
+.btn:last-child {
+  margin-right: 0;
+}
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: var(--text-secondary);
+  font-size: 14px;
+  border-top: 1px solid #e5e7eb;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(6px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+  padding: 1rem;
+}
+.modal-overlay.active {
+  display: flex;
+}
+.modal-content {
+  background: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.modal-content header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-content header h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+.modal-content header button {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--transition);
+  user-select: none;
+}
+.modal-content header button:hover,
+.modal-content header button:focus {
+  color: var(--accent);
+  outline: none;
+}
+.modal-body {
+  padding: 1rem 1.5rem;
+  overflow: auto;
+  flex-grow: 1;
+}
+@media (max-width: 480px) {
+  header nav.container {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+  .grade-card {
+    font-size: 1.4rem;
+    padding: 2rem 1rem;
+    height: 100px;
+  }
+  .content-section h2 {
+    font-size: 1.75rem;
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

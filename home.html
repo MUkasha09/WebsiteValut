@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Grade Book & Notes Library</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+  :root {
+    --bg: #fff;
+    --text-primary: #111828<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>School Library Home</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <nav class="container" role="navigation" aria-label="Primary">
+    <div class="logo" tabindex="0">School Library</div>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="9th.html">9th Grade</a></li>
+      <li><a href="10th.html">10th Grade</a></li>
+      <li><a href="11th.html">11th Grade</a></li>
+      <li><a href="12th.html">12th Grade</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero" aria-label="Main Hero">
+    <h1>Welcome to the School Book & Notes Library</h1>
+    <p>Select your grade below to explore books and notes for your studies.</p>
+  </section>
+
+  <nav class="grades-grid" aria-label="Grade Navigation">
+    <a href="9th.html" class="grade-card" role="link" tabindex="0" aria-label="9th Grade Books and Notes">9th Grade</a>
+   </nav>
+</main>
+
+<footer>
+  &copy; 2024 School Library
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+;
+    --text-secondary: #6b7280;
+    --accent: #000;
+    --accent-hover: #222;
+    --radius: 0.75rem;
+    --shadow: rgba(0,0,0,0.07);
+    --container-max: 1200px;
+    --transition: 0.3s ease;
+    --font-family: 'Poppins', sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background: var(--bg);
+    color: var(--text-secondary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+  a:hover, a:focus {
+    color: var(--accent-hover);
+    outline: none;
+  }
+  .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    padding: 2rem 1rem 4rem;
+    text-align: center;
+  }
+  header h1 {
+    font-weight: 800;
+    font-size: 3.5rem;
+    margin: 0 0 0.5rem;
+    color: var(--text-primary);
+    line-height: 1.1;
+  }
+  header p {
+    font-size: 1.3rem;
+    margin: 0 0 3rem;
+  }
+  .grades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+  }
+  .grade-card {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px var(--shadow);
+    padding: 3rem 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    border: 2px solid transparent;
+    text-align: center;
+    transition:
+      border-color var(--transition),
+      box-shadow var(--transition),
+      transform var(--transition);
+    user-select: none;
+  }
+  .grade-card:hover,
+  .grade-card:focus {
+    border-color: var(--accent-hover);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+    outline: none;
+    color: var(--accent-hover);
+  }
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: var(--text-secondary);
+    font-size: 14px;
+  }
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2.5rem;
+    }
+    .grade-card {
+      padding: 2rem 1rem;
+      font-size: 1.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header class="container" role="banner">
+  <h1>School Books & Notes Library</h1>
+  <p>Choose your grade to browse books and notes.</p>
+</header>
+<main class="container" role="main">
+  <nav class="grades-grid" aria-label="Grade selection navigation">
+    <a href="9th.html" class="grade-card" tabindex="0" role="link" aria-label="9th Grade Books and Notes">9th Grade</a>
+    <a href="10th.html" class="grade-card" tabindex="0" role="link" aria-label="10th Grade Books and Notes">10th Grade</a>
+    <a href="11th.html" class="grade-card" tabindex="0" role="link" aria-label="11th Grade Books and Notes">11th Grade</a>
+    <a href="12th.html" class="grade-card" tabindex="0" role="link" aria-label="12th Grade Books and Notes">12th Grade</a>
+  </nav>
+</main>
+<footer>
+  &copy; 2024 School Books & Notes Library
+</footer>
+</body>
+</html>
+
